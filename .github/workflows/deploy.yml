@@ -17,7 +17,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: JulienKEIFF/docker-registry/julienkeiff.fr
+        name: julienkeiff/docker-registry/julienkeiff.fr
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         registry: docker.pkg.github.com
