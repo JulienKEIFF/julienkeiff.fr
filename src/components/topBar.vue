@@ -6,7 +6,6 @@
         <a href="https://github.com/JulienKEIFF" target="_blank"><GitHub /></a>
         <a href="mailto:j.keiff@hotmail.fr" target="_blank"><Mail /></a>
         <a href="/document"><Document /></a>
-        <div></div>
       </span>
     </div>
   </div>
