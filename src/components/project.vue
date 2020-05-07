@@ -2,7 +2,8 @@
   <div id="project-view">
     <h1>MES PROJETS</h1>
      <div id="card-list">
-       <Card image="app/mangalist.png" title="MangaList" descr="Application destinée au mobile afin de pouvoir gérer simplement sa mangathèque." github githubURL=" " />
+      <Card image="app/mangalist.png" title="MangaList" descr="Application destinée au mobile afin de pouvoir gérer simplement sa mangathèque." github githubURL="https://github.com/JulienKEIFF/mangalist" />
+      <Card image="app/animList.png" title="animList" descr="Application web destinée à la gestion des series animée vue ou à voir. De plus ce système s'applique aussi sur une large gamme de manga." github githubURL="https://github.com/JulienKEIFF/animlist_v2" isOnSite onSiteURL="http://animlist.julienkeiff.fr" />
     </div>
   </div>
 </template>
@@ -33,8 +34,9 @@ export default {
     border-bottom: solid 2px #254E58;
   }
   .card-list{
-    width: 100%;
+    width: 100vw;
     height: 400px;
+    overflow: scroll;
   }
 }
 </style>

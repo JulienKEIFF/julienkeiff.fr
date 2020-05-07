@@ -1,7 +1,7 @@
 <template>
   <div id="home">
-    <gameView />
     <projectView />
+    <gameView />
   </div>
 </template>
 

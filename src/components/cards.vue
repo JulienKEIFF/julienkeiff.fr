@@ -73,13 +73,16 @@ export default {
     text-transform: uppercase;
   }
   p{
-    text-align: left;
+    text-align: justify;
+    text-justify: auto;
+    font-size: 16px;
     text-indent: 15px;
     margin-left: 5px;
     line-height: 22px;
     margin-bottom: 0;
     padding-bottom: 0;
     height: 50px;
+    padding: 0 10px 0 10px;
   }
   .link-card{
     margin-top: 85px;
