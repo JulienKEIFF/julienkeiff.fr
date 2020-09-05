@@ -1,22 +1,19 @@
 <template>
   <div class="card">
-    <div class="image-div">
+    <div class="info">
+      <a v-bind:href="onSiteURL" target="_blank" v-if="isOnSite === true" class="icon"> <onSite /> </a>
+      <a v-bind:href="githubURL" target="_blank" v-if="github === true" class="icon"> <GitHub /> </a>
+    </div>
+
+    <div class="background">
       <img v-bind:src="require('./../assets/img/' + image)">
     </div>
-    <h2>{{title}}</h2>
-    <p>{{descr}}</p>
-    <div class="link-card">
-      <div v-if="github === true" class="icon">
-        <a v-bind:href="githubURL" target="_blank">
-          <GitHub />
-        </a>
-      </div>
-      <div v-if="isOnSite === true" class="icon">
-        <a v-bind:href="onSiteURL" target="_blank">
-          <onSite />
-        </a>
-      </div>
+
+    <div class="text">
+      <h1> {{title}} </h1>
+      <h2> {{descr}} </h2>
     </div>
+
   </div>
 </template>
 
@@ -44,58 +41,63 @@ export default {
 
 <style scoped lang="scss">
 .card{
-  width: 300px;
+  position: relative;
+  overflow: hidden;
   height: 400px;
-  border: solid 1px #254E58;
-  margin: 35px 20px;
-  border-radius: 2px;
+  width: 300px;
   float: left;
-  transition-duration: 0.2s;
-  .image-div{
-    height: 150px;
-    overflow: hidden;
+  background: rgba(255, 0, 0, 0.356);
+  margin: 3vh 2vw;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 2%;
+  .background{
     img{
-      width: 300px;
+      width: 100%;
     }
   }
-  &:hover{
-    scale: 1.01;
-    transition-duration: 0.2s;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  .text{
+    position: absolute;
+    top: 80%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transition-duration: 1s;
+    border-radius: 5%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.527);
+    h1{
+      margin-top: 25px;
+      margin-left: 10px;
+      text-transform: uppercase;
+      font-size: 3.5vh;
+      font-weight: bold;
+    }
+    h2{
+      text-align: left;
+      text-justify: inter-word;
+      font-size: 2.5vh;
+      margin: 0 10px;
+    }
   }
-  h2{
-    border-bottom: 1px solid #254E58;
-    color: #88BDBC;
-    text-align: left;
-    text-indent: 20px;
-    margin: 0 15px;
-    padding: 20px 0 5px 0;
-    text-transform: uppercase;
-  }
-  p{
-    text-align: justify;
-    text-justify: auto;
-    font-size: 16px;
-    text-indent: 15px;
-    margin-left: 5px;
-    line-height: 22px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    height: 50px;
-    padding: 0 10px 0 10px;
-  }
-  .link-card{
-    margin-top: 85px;
-    text-align: left;
-    margin-left: 20px;
+  .info{
+    position: absolute;
+    width: 20%;
+    background: #88BDBC;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 10%;
     .icon{
-      display: inline-block;
-      width: 50px;
-      .material-design-icon__svg{
-        font-size: 2.7em;
-        color: #254E58;
-      }
+      color: white;
+      height: 100%;
+      font-size: 2vw;
+      margin: 0 auto;
+      text-align: center;
+      text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.527);
     }
+  }
+  &:hover > .text{
+    top: 30%;
+    transition-duration: 1s;
   }
 }
+
+
 </style>

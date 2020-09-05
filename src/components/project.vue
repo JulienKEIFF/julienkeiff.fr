@@ -4,6 +4,7 @@
      <div id="card-list">
       <Card image="app/mangalist.png" title="MangaList" descr="Application destinée au mobile afin de pouvoir gérer simplement sa mangathèque." github githubURL="https://github.com/JulienKEIFF/mangalist" />
       <Card image="app/animList.png" title="animList" descr="Application web destinée à la gestion des series animée vue ou à voir. De plus ce système s'applique aussi sur une large gamme de manga." github githubURL="https://github.com/JulienKEIFF/animlist_v2" isOnSite onSiteURL="http://animlist.julienkeiff.fr" />
+      <Card image="app/FridgeCompanion.png" title="Fridge Companion" descr="Application mobile dont le but est de gérer sa liste d'aliment et de créer automatiquement des listes de course" github githubURL="https://github.com/JulienKEIFF/Fridge_Companion" />
     </div>
   </div>
 </template>
@@ -30,13 +31,11 @@ export default {
     padding-top: 50px;
     text-align: left;
     font-size: 1.7em;
-    color: #254E58;
-    border-bottom: solid 2px #254E58;
+    color: rgba(0, 0, 0, 0.65);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.25);
   }
   .card-list{
-    width: 100vw;
-    height: 400px;
-    overflow: scroll;
+    position: relative;
   }
 }
 </style>

@@ -20,7 +20,7 @@ export default {
 
 <style scoped lang="scss">
 #project-view{
-  height: 550px;
+  height: 550px ;
   overflow-y: hidden;
   position: relative;
   top: 50px;
@@ -29,12 +29,11 @@ export default {
     padding-top: 50px;
     text-align: left;
     font-size: 1.7em;
-    color: #254E58;
-    border-bottom: solid 2px #254E58;
+    color: rgba(0, 0, 0, 0.65);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.25);
   }
   .card-list{
-    width: 100%;
-    height: 400px;
+    position: relative;
   }
 }
 </style>
