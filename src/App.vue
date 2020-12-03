@@ -1,32 +1,30 @@
 <template>
   <div id="app">
-    <topBar />
-    
+    <nav-bar />
     <router-view/>
   </div>
 </template>
 
 <script>
-import topBar from './components/topBar'
-
+import navBar from '@/components/navBar'
 export default {
-  name: 'app',
-  components: {
-    topBar,    
+  components:{
+    navBar
   }
 }
 </script>
 
-<style>
-html{
-  padding: 0;
-  margin: 0;
-}
-#app {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss">
+  :root{
+    --dark-blue: #12232E;
+    --ligther-blue: #007CC7;
+    --ligthest-blue: #4DA8DA;
+    --shadow-dark-blue: #203647;
+    --shadow-light-blue: #EEFBFB;
+  } 
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
 </style>

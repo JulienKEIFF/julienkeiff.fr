@@ -1,5 +1,0 @@
-Primary : #88BDBC;  //Blue-green
-Second :  #254E58;  //Dark-blue
-Third :   #112D32;  //Black
-Fourth:   #4F4A41;  //Brown
-Fiveth:   #6E6658;  //Light-brown
