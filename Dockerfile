@@ -13,21 +13,22 @@ RUN npm ci
 COPY . .
 # Build application 
 RUN npm run build
+# Install express
+RUN rm -r node_modules && npm i express
 
 
 # Now build the final image
 FROM alpine:3.11
 # Add dependency needed to run app
-RUN apk --no-cache add nodejs npm
+RUN apk --no-cache add nodejs
 # Other command will run in /julienkeiff.fr
 WORKDIR /julienkeiff.fr
 # Create a folder for front
 RUN mkdir /julienkeiff.fr/dist
 # Copy the front build in the builder image
 COPY --from=builder /julienkeiff.fr/dist ./dist
-# Install express
-RUN npm i express
 # Copy the server file inside this docker
+COPY --from=builder /julienkeiff.fr/node_modules ./node_modules
 COPY --from=builder /julienkeiff.fr/server.js .
 # When docker start it launch this command
 CMD ["node", "server"]
