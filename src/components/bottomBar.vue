@@ -1,6 +1,6 @@
 <template>
   <div id="bottom-bar">
-     coucou
+     
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
   #bottom-bar{
     margin-top: 5vh;
     width: 100vw;

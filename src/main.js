@@ -8,10 +8,10 @@ import textFilter from "./modules/index"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faAngleDown, faAngleUp, faTv, faCogs, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleUp, faTv, faCogs, faGlobeEurope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add([faGithub, faLinkedin, faAngleDown, faAngleUp, faTv, faCogs, faGlobe])
+library.add([faGithub, faLinkedin, faAngleDown, faAngleUp, faTv, faCogs, faGlobeEurope])
 
 
 Vue.config.productionTip = false

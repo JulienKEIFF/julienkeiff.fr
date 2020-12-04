@@ -11,8 +11,14 @@
     </div>
 
     <div class="plus" :class="open ? 'show' : 'hide'">
-      <icon :icon="['fab', 'github']" v-if="data.github" />
-      <icon :icon="['fa', 'globe']" v-if="data.web" />
+      <div class="plus-item">
+        <icon :icon="['fab', 'github']" v-if="data.github" class="icon-plus" /> 
+        <span class="info-plus" v-if="data.github" @click="goTo(data.github)">{{"Voir le Github"}}</span>
+      </div>
+      <div class="plus-item">
+        <icon :icon="['fas', 'globe-europe']" v-if="data.web" class="icon-plus" /> 
+        <span class="info-plus" v-if="data.web" @click="goTo(data.web)">{{"Voir sur le web"}}</span>
+      </div>
     </div>
 
   </div>
@@ -33,6 +39,9 @@ export default {
   methods:{
     getImgPath: function(){
       return require(`../../assets/img/${this.data.type}/${this.data.img}`)
+    },
+    goTo: function(path){
+      window.open(path, '_blank')
     }
   }
 }
@@ -66,7 +75,7 @@ export default {
       align-items: center;
       justify-content: center;
       border-radius: 15% 15% 15% 15% / 0% 0% 100% 100% ;
-      font-size: 150%;
+      font-size: 130%;
 
     }
     .img{
@@ -102,6 +111,7 @@ export default {
       }
     }
     .more.open{
+      bottom: 0%;
       .icon{
         position: absolute;
         top: 7%;
@@ -116,10 +126,35 @@ export default {
       width: 100%;
       background: var(--ligthest-blue);
       transition-duration: 0.5s;
+      display: flex;
+      flex-direction: column;
     }
     .show{
       top: 100%;
       transition-duration: 0.5s;
+    }
+    .hide{
+      opacity: 0;
+    }
+    .plus-item{
+      display: flex;
+      flex-direction: row;
+      height: 45%;
+      align-items: center;
+      .icon-plus{
+        width: 20%;
+        height: 70%;
+      }
+      .info-plus{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-left: 0%;
+        z-index: 10;
+      }
+      &:first-of-type{
+        margin-top: 1%;
+      }
     }
   }
 </style>

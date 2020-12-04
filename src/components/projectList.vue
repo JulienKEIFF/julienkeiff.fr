@@ -39,25 +39,25 @@ export default {
         name: "Mangalist",
         img: "mangalist.png",
         type: "app",
-        github: "1"
+        github: "https://github.com/JulienKEIFF/mangalist"
       },{
         name: "AnimList",
         img: "animList.png",
         type: "app",
-        github: "1",
-        web: "1"
+        github: "https://github.com/JulienKEIFF/animlist_v2",
+        web: "https://animlist.julienkeiff.fr/"
       },{
         name: "Fridge Companion",
         img: "FridgeCompanion.png",
         type: "app",
-        github: "1"
+        github: "https://github.com/JulienKEIFF/Fridge_Companion"
       }],
       gameProjectListData: [{
         name: "Game Of Life",
         img: "gameOfLife.png",
         type: "game",
-        github:"1",
-        web: "1"
+        github:"https://github.com/JulienKEIFF/gameOfLife",
+        web: "https://gameoflife.julienkeiff.fr/"
       }],
       moduleProjectListData: [{
         name: "Vue Filter Collection",

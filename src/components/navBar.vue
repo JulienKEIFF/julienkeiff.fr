@@ -40,7 +40,7 @@ export default {
       display: flex;
       height: 100%;
       align-items: center;
-      margin-left: 1%;
+      margin-left: 2%;
       color: white;
       font-size: 3em;
       font-family: 'Julius Sans One', sans-serif;
