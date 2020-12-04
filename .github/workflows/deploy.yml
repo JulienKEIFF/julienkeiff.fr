@@ -10,15 +10,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Get release version
-      id: get_version
-      run: echo ::set-env name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
-
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: julienkeiff/docker-registry/julienkeiff.fr
+        pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         registry: docker.pkg.github.com
-        tags: "latest,${{ env.RELEASE_VERSION }}"
+        tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
+
+
