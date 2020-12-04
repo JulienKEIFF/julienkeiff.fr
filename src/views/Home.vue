@@ -1,15 +1,22 @@
 <template>
   <div id="home">
     <info-band />
+    <project-list />
+    <bottomBar />
   </div>
 </template>
 
 <script>
 import infoBand from '@/components/infoBand'
+import projectList from '@/components/projectList'
+import bottomBar from '@/components/bottomBar'
+
 export default {
   name: 'Home',
   components: {
-    infoBand
+    infoBand,
+    projectList,
+    bottomBar
   },
   data(){
     return{
