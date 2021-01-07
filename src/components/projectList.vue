@@ -23,6 +23,14 @@
         :data="moduleProject"
       />
     </div>
+
+    <span class="title"> {{"Projet Scolaire"}} </span>
+    <div class="container">
+      <project-component class="project" v-for="(moduleProject, i) in moduleProjectSchoolData" 
+        :key="i+moduleProject.name" 
+        :data="moduleProject"
+      />
+    </div>
   </div>
 </template>
 
@@ -39,36 +47,55 @@ export default {
         name: "Mangalist",
         img: "mangalist.png",
         type: "app",
-        github: "https://github.com/JulienKEIFF/mangalist"
+        github: "https://github.com/JulienKEIFF/mangalist",
+        descr: "Une application Android pour garder une trace des livres que l'on possède"
       },{
         name: "AnimList",
         img: "animList.png",
         type: "app",
         github: "https://github.com/JulienKEIFF/animlist_v2",
-        web: "https://animlist.julienkeiff.fr/"
+        web: "https://animlist.julienkeiff.fr/",
+        descr: "Site pour répertorier les séries animées vues"
       },{
         name: "Fridge Companion",
         img: "FridgeCompanion.png",
         type: "app",
-        github: "https://github.com/JulienKEIFF/Fridge_Companion"
+        github: "https://github.com/JulienKEIFF/Fridge_Companion",
+        descr: "Application Android afin de faire un inventaire de ses produits alimentaires"
       }],
       gameProjectListData: [{
         name: "Game Of Life",
         img: "gameOfLife.png",
         type: "game",
         github:"https://github.com/JulienKEIFF/gameOfLife",
-        web: "https://gameoflife.julienkeiff.fr/"
+        web: "https://gameoflife.julienkeiff.fr/",
+        descr: "Implémentation Vanilla JS du célèbre jeu de la vie"
       }],
       moduleProjectListData: [{
         name: "Vue Filter Collection",
         img: "vueFilter.png",
         type: "module",
-        github: "1"
+        github: "1",
+        descr: "Collection de différents filtres pour VueJS"
       },{
         name: "Vue Translate System",
         img: "code.jpeg",
-        type: "module",
-        github: "1"
+        type: "school",
+        github: "1",
+        descr: "Système basique pour la localization d'un site"
+      }],
+      moduleProjectSchoolData: [{
+        name: "Maquette projet fil rouge",
+        img: "maquette.png",
+        type: "school",
+        github: "https://github.com/JulienKEIFF/maquette1",
+        descr: "Maquette pour le site du projet 'Fil Rouge' du CESI"
+      },{
+        name: "Better Eats",
+        img: "code.jpeg",
+        type: "school",
+        github: "https://github.com/JulienKEIFF/BetterEats",
+        descr: "Application en ligne de commande sous NodeJS pour se faire livrer des repas chez soi"
       }]
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="project-item">
-    <div class="info-item">
+    <div class="info-item" @mouseover="viewBubble = true" @mouseleave="viewBubble = false">
       <div class="name">
         {{data.name}}
       </div>
@@ -21,12 +21,21 @@
       </div>
     </div>
 
+  <transition name="fade" mode="out-in">
+    <bubble class="bubble-info" :descr="data.descr" v-if="viewBubble && data.descr" />
+  </transition>
+
   </div>
 </template>
 
 <script>
+import bubble from './hoverBubble'
+
 export default {
   name: 'project-item',
+  components: {
+    bubble
+  },
   props:{
     data: Object,
   },
@@ -34,6 +43,7 @@ export default {
     return{
       open: false,
       imgPath: "",
+      viewBubble: false
     }
   },
   methods:{
@@ -55,7 +65,6 @@ export default {
     height: 50vh;
     cursor: pointer;
     margin-right: 5%;
-    z-index: 0;
     margin-bottom: 3%;
     .info-item{
       position: relative;
@@ -68,7 +77,7 @@ export default {
       position: relative;
       top: 0;
       z-index: 1;
-      background: var(--ligthest-blue);
+      background: var(--ligther-blue);
       height: 10%;
       width: 80%;
       left: 10%;
@@ -76,7 +85,7 @@ export default {
       justify-content: center;
       border-radius: 15% 15% 15% 15% / 0% 0% 100% 100% ;
       font-size: 130%;
-
+      color: #ececec;
     }
     .img{
       position: absolute;
@@ -100,7 +109,8 @@ export default {
       border-radius: 50%;
       transition-duration: 0.2s;
       z-index: 2;
-      background: var(--ligthest-blue);
+      background: var(--ligther-blue);
+      color: white;
     }
     .more.close{
       .icon{
@@ -128,6 +138,7 @@ export default {
       transition-duration: 0.5s;
       display: flex;
       flex-direction: column;
+      color: white;
     }
     .show{
       top: 100%;
@@ -156,5 +167,21 @@ export default {
         margin-top: 1%;
       }
     }
+    .bubble-info{
+      position: absolute;
+      top: 20%;
+      left: 110%;
+      width: 50%;
+      z-index: 200;
+      overflow: visible;
+    }
   }
+
+
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-active /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
