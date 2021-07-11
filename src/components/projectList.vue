@@ -62,6 +62,12 @@ export default {
         type: "app",
         github: "https://github.com/JulienKEIFF/Fridge_Companion",
         descr: "Application Android afin de faire un inventaire de ses produits alimentaires"
+      },{
+        name: "Feed-Tech",
+        img: "Feed-tech.png",
+        type: "app",
+        github: "https://github.com/JulienKEIFF/Feed-Tech_App",
+        descr: "Application Android qui permet de faire une veille technologique en egregeant différents flux RSS"
       }],
       gameProjectListData: [{
         name: "Game Of Life",

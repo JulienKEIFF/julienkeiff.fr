@@ -107,7 +107,7 @@ export default {
       left: 50%;
       transform: translateX(-50%);
       border-radius: 50%;
-      transition-duration: 0.2s;
+      transition-duration: 0.4s;
       z-index: 2;
       background: var(--ligther-blue);
       color: white;
@@ -121,7 +121,7 @@ export default {
       }
     }
     .more.open{
-      bottom: 0%;
+      bottom: 4%;
       .icon{
         position: absolute;
         top: 7%;
