@@ -1,27 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div class="w-full lg:w-5/6 m-auto min-h-screen px-16 bg-gray-800 text-white overflow-x-hidden">
+      <shortcut />
+     <!--  <introduce /> -->
+      <journey />
+      <skills />
+      <projects />
+
+    </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+
+import Shortcut from './components/shortcut.vue';
+import Introduce from './components/introduce.vue';
+import Journey from './components/journey.vue';
+import Skills from './components/skills.vue';
+import Projects from './components/projects.vue';
+
+import Bottom from './components/bottom.vue';
 
 @Options({
-  components: {
-    HelloWorld,
-  },
+  components: { Shortcut, Introduce, Journey, Skills, Projects, Bottom },
 })
 export default class App extends Vue {}
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style>
+
 </style>
