@@ -44,6 +44,13 @@ export default {
         github: 'https://github.com/JulienKEIFF/Feed-Tech_App',
       },
       {
+        title: 'Todo List',
+        description: 'Application Android permettant de faire une liste de tâches',
+        image: 'assets/images/app/todolist.png',
+        link: '',
+        github: 'https://github.com/JulienKEIFF/todolist-flutter',
+      },
+      {
         title: 'Game Of Life',
         description: 'Implémentation JavaScript du célèbre jeu de la vie',
         image: 'assets/images/game/gameOfLife.png',
