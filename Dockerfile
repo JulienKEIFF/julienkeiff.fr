@@ -8,7 +8,7 @@ WORKDIR /julienkeiff.fr
 COPY package-lock.json ./package-lock.json
 COPY package.json ./package.json
 # Install dependencies of package.json
-RUN npm ci
+RUN npm i
 # Copy all files inside docker
 COPY . .
 # Build application 
