@@ -5,7 +5,6 @@ RUN apk --no-cache add gcc g++ make python nodejs npm
 # Other command will run in /julienkeiff.fr
 WORKDIR /julienkeiff.fr
 # Copy package-lock and package.json inside the docker
-COPY package-lock.json ./package-lock.json
 COPY package.json ./package.json
 # Install dependencies of package.json
 RUN npm i
